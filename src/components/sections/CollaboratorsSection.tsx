@@ -16,6 +16,9 @@ export const CollaboratorsSection = () => {
   return (
     <section className="py-12 bg-background overflow-hidden">
       <SectionWrapper>
+      <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Partners & Collaborators</h2>
+        </div>
         
         {/* Infinite Scroll Container */}
         <div className="relative">

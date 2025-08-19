@@ -12,7 +12,7 @@ const About = () => {
       <Navigation />
       
       <PageHero 
-        title={<>About US</>}
+        // title={<>About US</>}
         // subtitle="Advancing Climate Action Through Decarbonization & Climate Resilience"
         backgroundImage={aboutHeroImage}
         altText="About NCEL Research Lab"

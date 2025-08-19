@@ -62,10 +62,10 @@ export const PillarsSection = () => {
                 return (
                   <div key={pillar.title} className="relative pl-16">
                     {/* Timeline node */}
-                    <div className="absolute left-0 top-2">
-                      <div className="w-12 h-12 rounded-full bg-primary-foreground ring-2 ring-primary-foreground/40 flex items-center justify-center shadow-sm">
+                    <div className="absolute -left-1 top-6">
+                      <div className="w-14 h-14 rounded-full bg-primary-foreground ring-2 ring-primary-foreground/40 flex items-center justify-center shadow-sm">
                         {/* <Icon className="h-6 w-6 text-primary-foreground" /> */}
-                        <img src={Logo} alt={`${pillar.title} logo`} className="h-10 w-10 object-contain" />
+                        <img src={Logo} alt={`${pillar.title} logo`} className="h-12 w-12 object-contain" />
                       </div>
                     </div>
                     {/* Card */}

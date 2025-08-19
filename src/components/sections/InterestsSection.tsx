@@ -29,7 +29,7 @@ export const InterestsSection = () => {
 			<SectionWrapper>
 				{/* Header */}
 				<div className="text-center max-w-3xl mx-auto mb-12">
-					<h2 className="mt-4 text-5xl md:text-6xl font-bold text-primary tracking-tight">
+					<h2 className="mt-4 text-4xl md:text-5xl font-bold text-primary tracking-tight">
 						Focus Areas
 					</h2>
 				</div>
@@ -62,7 +62,7 @@ export const InterestsSection = () => {
 									<CardContent className="p-6">
 										<div className="flex items-start gap-4">
 											<div className="relative flex-shrink-0">
-												<div className="relative z-10 w-14 h-14 rounded-full flex items-center justify-center p-3 ring-1 ring-primary/20">
+												<div className="relative bg-primary-dark z-10 w-16 h-16 rounded-full flex items-center justify-center p-2 border-2 border-primary">
 													<img
 														src={interest.icon}
 														alt={`${interest.title} icon`}

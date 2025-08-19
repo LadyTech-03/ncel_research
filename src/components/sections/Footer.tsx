@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Send, MapPin, Mail, Phone } from 'lucide-react';
+import { Send, MapPin, Mail, Phone, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { FaXTwitter } from "react-icons/fa6";
 import SectionWrapper from '@/components/sections/SectionWrapper';
 
 
@@ -18,6 +19,14 @@ const pillars = [
   'Capacity Building',
   'Entrepreneurship',
   'Consulting'
+];
+
+const socials = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ncelknust', Icon: Linkedin },
+  { name: 'Twitter', href: '#', Icon: FaXTwitter },
+  { name: 'Facebook', href: 'https://www.facebook.com/ncelknust', Icon: Facebook },
+  { name: 'Instagram', href: '#', Icon: Instagram },
+  { name: 'YouTube', href: 'https://www.youtube.com/@NCELKNUST', Icon: Youtube },
 ];
 
 export const Footer = () => {
@@ -130,6 +139,21 @@ export const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-10 pt-8 text-center">
+          <div className="flex justify-center gap-3 mb-5">
+            {socials.map(({ name, href, Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground transition-colors"
+                title={name}
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
           <p className="text-primary-foreground/80">
             Copyright © 2025 All Rights Reserved.
           </p>

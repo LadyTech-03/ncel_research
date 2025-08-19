@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Search, Calendar, FileText, Activity } from 'lucide-react';
-import labResearchImage from '@/assets/banner/banner1.jpg';
+import labResearchImage from '@/assets/banner/banner_projects.jpg';
 import SectionWrapper from '@/components/sections/SectionWrapper';
 
 
@@ -215,13 +215,13 @@ const Projects = () => {
           <div className="space-y-8">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project) => (
-                <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-none">
                   <div className="md:flex">
                     <div className="md:w-1/3">
                       <img 
                         src={project.image} 
                         alt={project.title.toString()}
-                        className="h-64 w-full object-cover md:h-full"
+                        className="h-64 w-full object-cover rounded-xl md:h-full"
                       />
                     </div>
                     <div className="md:w-2/3">

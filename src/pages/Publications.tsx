@@ -169,9 +169,7 @@ export const Publications = () => {
     <div className="min-h-screen">
       <Navigation />
       <PageHero
-        title={<>
-          Publications
-        </>}
+        title={"Publications"}
         backgroundImage={aboutHeroImage}
         altText="Publications Hero"
       />

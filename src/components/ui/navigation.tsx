@@ -1,13 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import SectionWrapper from '@/components/sections/SectionWrapper';
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink,
+} from '@/components/ui/navigation-menu';
 
 
 const navigationItems = [
   { name: 'About Us', href: '/about' },
-  { name: 'Teams', href: '/teams' },
   { name: 'Projects', href: '/projects' },
 ];
 
@@ -17,9 +24,18 @@ const mediaDropdownItems = [
   { name: 'Publications', href: '/publications' },
 ];
 
+const teamDropdownItems = [
+  { name: 'Project Leadership', href: '/teams#leadership' },
+  { name: 'Co-Researchers', href: '/teams?tab=coResearchers#team-tabs' },
+  { name: 'Co-Supervisors', href: '/teams?tab=coSupervisors#team-tabs' },
+  { name: 'Postgraduate Students', href: '/teams?tab=postgraduateStudents#team-tabs' },
+  { name: 'Research Assistants', href: '/teams?tab=researchAssistants#team-tabs' },
+  { name: 'Research Fellows', href: '/teams?tab=researchFellows#team-tabs' },
+  { name: 'Communications', href: '/teams?tab=communications#team-tabs' },
+];
+
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
@@ -56,42 +72,69 @@ export const Navigation = () => {
                   </Link>
                 )
               ))}
+
+              {/* Teams Dropdown - shadcn NavigationMenu */}
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <Link to="/teams">
+                      <NavigationMenuTrigger className="bg-transparent text-primary hover:text-primary-dark text-lg font-medium px-3 py-2 hover:bg-muted">
+                        Teams
+                      </NavigationMenuTrigger>
+                    </Link>
+                    <NavigationMenuContent className="border border-border shadow-strong">
+                      <div className="w-64 py-1">
+                        {teamDropdownItems.map((item) => (
+                          <NavigationMenuLink asChild key={item.name}>
+                            <Link
+                              to={item.href}
+                              className="block text-primary hover:text-primary-dark px-3 py-2 text-base transition-all duration-300 hover:bg-muted rounded-md font-semibold"
+                            >
+                              {item.name}
+                            </Link>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
               
-              {/* Media Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setMediaDropdownOpen(true)}
-                onMouseLeave={() => setMediaDropdownOpen(false)}
-              >
-                <button className="text-primary hover:text-primary-dark px-3 py-2 text-lg font-medium transition-all duration-300 hover:bg-muted rounded-md flex items-center">
-                  Media
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {mediaDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-48 bg-background border border-border rounded-md shadow-strong z-50">
-                    {mediaDropdownItems.map((item) => (
-                      item.href.startsWith('#') ? (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block text-primary hover:text-primary-dark px-3 py-2 text-lg font-medium transition-all duration-300 hover:bg-muted rounded-md items-center"
-                      >
-                        {item.name}
-                      </a>
-                      ) : (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          className="block text-primary hover:text-primary-dark px-3 py-2 text-lg font-medium transition-all duration-300 hover:bg-muted rounded-md items-center"
-                        >
-                          {item.name}
-                        </Link>
-                      )
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* Media Dropdown - shadcn NavigationMenu */}
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-transparent text-primary hover:text-primary-dark text-lg font-medium px-3 py-2 hover:bg-muted">
+                      Media
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="border border-border shadow-strong">
+                      <div className="w-48 py-1">
+                        {mediaDropdownItems.map((item) => (
+                          item.href.startsWith('#') ? (
+                            <NavigationMenuLink asChild key={item.name}>
+                              <a
+                                href={item.href}
+                                className="block text-primary hover:text-primary-dark px-3 py-2 text-base transition-all duration-300 hover:bg-muted rounded-md font-semibold"
+                              >
+                                {item.name}
+                              </a>
+                            </NavigationMenuLink>
+                          ) : (
+                            <NavigationMenuLink asChild key={item.name}>
+                              <Link
+                                to={item.href}
+                                className="block text-primary hover:text-primary-dark px-3 py-2 text-base transition-all duration-300 hover:bg-muted rounded-md font-semibold"
+                              >
+                                {item.name}
+                              </Link>
+                            </NavigationMenuLink>
+                          )
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
           </div>
 
@@ -146,18 +189,44 @@ export const Navigation = () => {
                 )
               ))}
               
+              {/* Mobile Teams Section */}
+              <div className="border-t border-border pt-2 mt-2">
+                <div className="text-lg font-medium text-muted-foreground mb-2 px-3">Teams</div>
+                {teamDropdownItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-primary hover:text-primary-dark block px-3 py-2 text-lg transition-all duration-300 hover:bg-background rounded-md font-semibold"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
               {/* Mobile Media Section */}
               <div className="border-t border-border pt-2 mt-2">
                 <div className="text-lg font-medium text-muted-foreground mb-2 px-3">Media</div>
                 {mediaDropdownItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-primary hover:text-primary-dark block px-3 py-2 text-lg transition-all duration-300 hover:bg-background rounded-md"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </a>
+                  item.href.startsWith('#') ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-primary hover:text-primary-dark block px-3 py-2 text-lg transition-all duration-300 hover:bg-background rounded-md font-semibold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="text-primary hover:text-primary-dark block px-3 py-2 text-lg transition-all duration-300 hover:bg-background rounded-md font-semibold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
               </div>
               

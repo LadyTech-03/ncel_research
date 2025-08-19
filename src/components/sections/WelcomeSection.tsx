@@ -19,11 +19,11 @@ export const WelcomeSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 right-0 transform lg:translate-x-0">
-                <div className="bg-card border border-border rounded-xl p-2 shadow-card max-w-lg">
-                  <h3 className="font-bold text-md text-primary">Dr. Yen Adams Sokama-Neuyam</h3>
-                  <p className="text-foreground text-md">Principal Investigator</p>
-                </div>
+            </div>
+            <div className="mt-4 w-80 mx-auto lg:mx-0">
+              <div className="bg-card border border-border rounded-xl p-2 shadow-card">
+                <h3 className="font-bold text-md text-primary text-center">Dr. Yen Adams Sokama-Neuyam</h3>
+                <p className="text-foreground text-lg text-center">Principal Investigator</p>
               </div>
             </div>
           </div>

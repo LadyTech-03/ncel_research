@@ -5,9 +5,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { ExternalLink } from 'lucide-react';
-import aboutHeroImage from '@/assets/banner/hero2.jpg';
+import aboutHeroImage from '@/assets/banner/banner_team.jpg';
 import SectionWrapper from '@/components/sections/SectionWrapper';
 import { FaLinkedin } from "react-icons/fa";
+import { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Images
 import drSokamaImage from '@/assets/team/dr-yen.jpg';
@@ -35,6 +37,7 @@ import EmperorImage from '@/assets/team/emperor.jpeg';
 import AndyImage from '@/assets/team/andy.jpeg';
 import EdmondImage from '@/assets/team/edmond.jpeg';
 import ChristabelImage from '@/assets/team/christabel.jpeg';
+import IsaacImage from '@/assets/team/isaac.jpg';
 // import AdwoaImage from '@/assets/team/adwoa.jpg';
 
 
@@ -196,6 +199,13 @@ const Teams = () => {
         image: ProsperImage,
         linkedin: "https://www.linkedin.com/in/prosperdadzie"
       }
+    ],
+    communications: [
+      {
+        name: "Mr. Isaac Marfo",
+        image: IsaacImage,
+        linkedin: "https://www.linkedin.com/in/isaac-marfo-ba41896b/"
+      },
     ]
   };
 
@@ -210,17 +220,17 @@ const Teams = () => {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
-              <h3 className="text-base sm:text-lg font-semibold text-foreground">{member.name}</h3>
-              <p className="text-sm text-muted-foreground mb-3">{member.role}</p>
+              <h3 className="text-base sm:text-xl font-semibold text-foreground">{member.name}</h3>
+              <p className="text-md text-muted-foreground mb-3">{member.role}</p>
             <div className="flex">
               {member.linkedin && (
                 <a 
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="rounded-full text-primary"
                 >
-                  <FaLinkedin className="w-4 h-4" />
+                  <FaLinkedin className="w-5 h-5" />
                 </a>
               )}
               {member.profile && (
@@ -228,9 +238,9 @@ const Teams = () => {
                   href={member.profile}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="rounded-full text-primary transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-5 h-5" />
                 </a>
               )}
             </div>
@@ -239,6 +249,25 @@ const Teams = () => {
       </CardContent>
     </Card>
   );
+
+  const location = useLocation();
+  const queryParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
+  const initialTab = queryParams.get('tab') ?? 'coResearchers';
+  const [activeTab, setActiveTab] = useState<string>(initialTab);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get('tab');
+    if (tab) {
+      setActiveTab(tab);
+    }
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location.search, location.hash]);
 
   return (
     <div className="min-h-screen">
@@ -251,7 +280,7 @@ const Teams = () => {
       />
 
       {/* Leadership Section */}
-      <section className="py-16 bg-background">
+      <section id="leadership" className="py-16 bg-background">
         <SectionWrapper>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">Project Leadership</h2>
@@ -268,8 +297,8 @@ const Teams = () => {
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-primary mb-3">Dr. Yen Adams Sokama-Neuyam</h3>
                   <p className="text-foreground text-xl mb-4 font-semibold">Principal Investigator (PI)</p>
-                  <p className="text-md text-foreground leading-relaxed mb-4">
-                    Senior Lecturer and Head of the Department of Petroleum Engineering at Kwame Nkrumah University of Science and Technology (KNUST). He also leads as the Principal Investigator of the Net-Zero Carbon Emission Lab (NCEL), where he drives research on CO2 geosequestration—including Carbon Capture and Storage (CCS), Underground Hydrogen Storage (UHS), and Enhanced Rock Weathering (ERW)—as well as industrial decarbonization, campus sustainability, and net-zero operations.
+                  <p className="text-lg text-foreground leading-relaxed mb-4">
+                  Senior Lecturer and Head of the Department of Petroleum Engineering at Kwame Nkrumah University of Science and Technology (KNUST).
                   </p>
                   <a 
                     href="https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/1fcbe1f07bb4.html"
@@ -312,19 +341,20 @@ const Teams = () => {
       </section>
 
       {/* Team Tabs Section */}
-      <section className="py-16 bg-muted">
+      <section id="team-tabs" className="py-16 bg-muted">
         <SectionWrapper>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">Team Members</h2>
           </div>
 
-          <Tabs defaultValue="coResearchers" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-8">
-              <TabsTrigger value="coResearchers" className="text-sm md:text-md">Co-Researchers</TabsTrigger>
-              <TabsTrigger value="coSupervisors" className="text-sm md:text-md">Co-Supervisors</TabsTrigger>
-              <TabsTrigger value="postgraduateStudents" className="text-sm md:text-md">Postgraduate Students</TabsTrigger>
-              <TabsTrigger value="researchAssistants" className="text-sm md:text-md">Research Assistants</TabsTrigger>
-              <TabsTrigger value="researchFellows" className="text-sm md:text-md">Research Fellows</TabsTrigger>
+              <TabsTrigger value="coResearchers" className="text-md md:text-lg">Co-Researchers</TabsTrigger>
+              <TabsTrigger value="coSupervisors" className="text-md md:text-lg">Co-Supervisors</TabsTrigger>
+              <TabsTrigger value="postgraduateStudents" className="text-md md:text-lg">Postgraduate Students</TabsTrigger>
+              <TabsTrigger value="researchAssistants" className="text-md md:text-lg">Research Assistants</TabsTrigger>
+              <TabsTrigger value="researchFellows" className="text-md md:text-lg">Research Fellows</TabsTrigger>
+              <TabsTrigger value="communications" className="text-md md:text-lg">Communications</TabsTrigger>
             </TabsList>
 
             <TabsContent value="coResearchers" className="space-y-8">
@@ -362,6 +392,14 @@ const Teams = () => {
             <TabsContent value="researchFellows" className="space-y-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {teamData.researchFellows.map((member, index) => (
+                  <TeamMember key={index} member={member} />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="communications" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {teamData.communications.map((member, index) => (
                   <TeamMember key={index} member={member} />
                 ))}
               </div>
