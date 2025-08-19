@@ -118,10 +118,10 @@ export const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary-foreground/80" />
                 <a 
-                  href="mailto:Ncel@Knust.Edu.Gh" 
+                  href="mailto:ncel@knust.edu.gh" 
                   className="text-primary-foreground hover:underline"
                 >
-                  Ncel@Knust.Edu.Gh
+                  ncel@knust.edu.gh
                 </a>
               </div>
               <div className="flex items-center gap-3">

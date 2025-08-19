@@ -48,7 +48,7 @@ export const PillarsSection = () => {
             </h2>
             
             <p className="text-xl lg:text-2xl text-primary-foreground leading-relaxed mb-0 md:mb-8">
-              At NCEL, our work is anchored in four core pillars that drive climate innovation and sustainability. Through cutting-edge research, skill-building programs, entrepreneurial development, and expert consulting, we create science-based solutions tailored to local realities and global needs.
+              At NCEL, our work is anchored in pillars that drive climate innovation and sustainability. Through cutting-edge research, skill-building programs, entrepreneurial development, and expert consulting, we create science-based solutions tailored to local realities and global needs.
             </p>
           </div>
           

@@ -204,7 +204,8 @@ const Teams = () => {
       {
         name: "Mr. Isaac Marfo",
         image: IsaacImage,
-        linkedin: "https://www.linkedin.com/in/isaac-marfo-ba41896b/"
+        linkedin: "https://www.linkedin.com/in/isaac-marfo-ba41896b/",
+        // profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/456783375f83.html/"
       },
     ]
   };
