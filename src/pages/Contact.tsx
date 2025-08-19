@@ -41,7 +41,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <PageHero 
-        title="Contact" 
+        // title="Contact" 
         backgroundImage={contactHeroImage}
         altText="Contact NCEL Team"
       />
