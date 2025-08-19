@@ -23,9 +23,9 @@ const pillars = [
 
 const socials = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ncelknust', Icon: Linkedin },
-  { name: 'Twitter', href: '#', Icon: FaXTwitter },
-  { name: 'Facebook', href: 'https://www.facebook.com/ncelknust', Icon: Facebook },
-  { name: 'Instagram', href: '#', Icon: Instagram },
+  { name: 'Twitter', href: 'https://x.com/NcelK33370/lists', Icon: FaXTwitter },
+  { name: 'Facebook', href: 'https://business.facebook.com/latest/home?asset_id=104580749386371', Icon: Facebook },
+  { name: 'Instagram', href: 'https://www.instagram.com/ncelknust/', Icon: Instagram },
   { name: 'YouTube', href: 'https://www.youtube.com/@NCELKNUST', Icon: Youtube },
 ];
 
