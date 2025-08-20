@@ -59,73 +59,85 @@ const Teams = () => {
         name: "Dr. Prince Asilevi Junior",
         role: "GHG Emissions Inventorying",
         image: drPrinceImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9b35c71682a9.html"
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9b35c71682a9.html"
       },
       {
         name: "Dr. Patrick Boakye",
         role: "Life Cycle Assessment (LCA)",
         image: drPatrickImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9ef15a96c443.html"
+        linkedin: "https://www.linkedin.com/in/patrick-boakye-67bb9876",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9ef15a96c443.html"
       },
       {
         name: "Dr. Prosper Akaba",
         role: "Stakeholder Engagement",
         image: drProsperImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/2cfeef779b6f.html"
+        linkedin: "https://www.linkedin.com/in/dr-francisca-adoma-acheampong-98831171",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/2cfeef779b6f.html"
       },
       {
         name: "Dr. Francisca Adoma Acheampong",
         role: "Artificial Intelligence",
         image: drFranciscaImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/fb34c7d09958.html"
+        linkedin: "https://www.linkedin.com/in/francisca-adoma-acheampong-98831171",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/fb34c7d09958.html"
       },
       {
         name: "Dr. David Nartey  Obemah",
         role: "Greenhouse Gas Measurements",
         image: drDavidImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/7771ee4547bd.html"
+        linkedin: "https://www.linkedin.com/in/david-nartey-obemah-ph-d-32457119",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/7771ee4547bd.html"
       },
     ],
     coSupervisors: [
       {
         name: "Dr. Kwame Sarkodie ",
         image: drSarkodieImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/dab01ca95f7f.html"
+        linkedin: "https://www.linkedin.com/in/kwame-sarkodie-ph-d-9b264585",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/dab01ca95f7f.html"
       },
       {
         name: "Dr. (Mrs.) Emmanuela Kwao-Boateng",
         image: drEmmanuelaImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/dab01ca95f7f.html"
+        linkedin: "https://www.linkedin.com/in/emmanuela-kwao-boateng-phd-59640276",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/b3bc4a59cfa1.html"
       },
       {
         name: "Dr. Samuel Erzuah",
         image: drErzuahImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/ddbb5e9281dd.html"
+        linkedin: "https://www.linkedin.com/in/erzuah-samuel-ph-d-68a2837a",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/ddbb5e9281dd.html"
       },
       {
         name: "Dr. Martina Francisca Baidoo",
         image: drMartinaImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9e5ca1a97ff6.html"
+        linkedin: "https://www.linkedin.com/in/martina-f-baidoo-phd-27a20723",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9e5ca1a97ff6.html"
       },
       {
         name: "Dr. Caspar Daniel Adenutsi",
         image: drCasparImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/c175b657fffb.html"
+        linkedin: "https://www.linkedin.com/in/caspar-daniel-adenutsi-095896373",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/c175b657fffb.html"
       },
       {
         name: "Mrs. Nancy Anataba Kyorku Dzikunu-Bansah",
         image: drNancyImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/ad3ede41c4d6.html"
+        linkedin: "https://www.linkedin.com/in/nakyorku",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/ad3ede41c4d6.html"
       },
       {
         name: "Dr. Stephen Adjei",
         image: drStephenImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/51671bab9dae.html"
+        linkedin: "https://www.linkedin.com/in/stephen-adjei-ph-d-457554135",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/51671bab9dae.html"
       },
       {
         name: "Dr. Jonathan Atuquaye Quaye",
         image: drJonathanImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/004ef285cd50.html"
+        linkedin: "https://www.linkedin.com/in/jonathan-atuquaye-quaye-ph-d-854b5049",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/004ef285cd50.html"
       },
     ],
     postgraduateStudents: [
@@ -139,7 +151,8 @@ const Teams = () => {
         name: "Kwame Kwarteng Sarpong",
         role: "PhD Petroleum Engineering",
         image: KwameImage,
-        linkedin: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/994e79bf5069.html"
+        linkedin: "https://www.linkedin.com/in/kwame-kwarteng-sarpong-5428301a",
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/994e79bf5069.html"
       },
       {
         name: "Dickson Agyei",
@@ -313,14 +326,24 @@ const Teams = () => {
                   <p className="text-lg text-foreground leading-relaxed mb-4">
                   Senior Lecturer and Head of the Department of Petroleum Engineering at Kwame Nkrumah University of Science and Technology (KNUST).
                   </p>
+                  <div className="flex gap-4">
                   <a 
                     href="https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/1fcbe1f07bb4.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <ExternalLink className="w-5 h-5" />
                   </a>
+                  <a 
+                    href="https://www.linkedin.com/in/yen-adams-sokama-neuyam-ph-d-79a7a1159"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  </div>
                 </div>
               </div>
             </Card>
@@ -344,14 +367,25 @@ const Teams = () => {
                   <p className="text-lg text-foreground leading-relaxed mb-4">
                   Directs research as head of the Reservoir Evaluation and Advanced Computational Technologies (REACT) Group.
                   </p>
+                  <div className="flex gap-4"> 
+
+                  <a 
+                    href="https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/9bb7dc3ed2d3.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
                   <a 
                     href="https://linkedin.com/in/williamampomah"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <Linkedin className="w-5 h-5" />
                   </a>
+                  </div>
                 </div>
               </div>
             </Card>
