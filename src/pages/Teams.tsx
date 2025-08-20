@@ -40,6 +40,8 @@ import ChristabelImage from '@/assets/team/christabel.jpeg';
 import IsaacImage from '@/assets/team/isaac.jpg';
 // import AdwoaImage from '@/assets/team/adwoa.jpg';
 
+import fallbackImage from '@/assets/team/user.jpg';
+
 
 interface TeamMember {
   name: string;
@@ -216,8 +218,12 @@ const Teams = () => {
         <div className="flex gap-4">
           <Avatar className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
             <AvatarImage src={member.image} alt={member.name} />
-            <AvatarFallback className="text-lg sm:text-xl font-semibold">
-              {member.name.split(' ').map((n: string) => n[0]).join('')}
+            <AvatarFallback>
+              <img 
+                src={fallbackImage} 
+                alt="Fallback Image" 
+                className="w-full h-full object-cover rounded-full" 
+              />
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
@@ -293,7 +299,13 @@ const Teams = () => {
               <div className="flex items-start gap-8">
                 <Avatar className="w-28 h-28 flex-shrink-0">
                   <AvatarImage src={drSokamaImage} alt="Dr. Yen Adams Sokama-Neuyam" />
-                  <AvatarFallback className="text-xl font-semibold">YS</AvatarFallback>
+                  <AvatarFallback>
+                    <img 
+                      src={fallbackImage} 
+                      alt="Fallback Image" 
+                      className="w-full h-full object-cover rounded-full" 
+                    />
+                  </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-primary mb-3">Dr. Yen Adams Sokama-Neuyam</h3>
@@ -318,7 +330,13 @@ const Teams = () => {
               <div className="flex items-start gap-8">
                 <Avatar className="w-28 h-28 flex-shrink-0">
                   <AvatarImage src={drWilliamImage} alt="Prof. William Ampomah" />
-                  <AvatarFallback className="text-xl font-semibold">WA</AvatarFallback>
+                  <AvatarFallback>
+                    <img 
+                      src={fallbackImage} 
+                      alt="Fallback Image" 
+                      className="w-full h-full object-cover rounded-full" 
+                    />
+                  </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
                   <h3 className="text-3xl font-bold text-primary mb-3">Prof. William Ampomah</h3>
