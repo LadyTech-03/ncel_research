@@ -25,6 +25,7 @@ const mediaDropdownItems = [
 ];
 
 const teamDropdownItems = [
+  { name: 'Advisory Board', href: '/advisory-board'},
   { name: 'Project Leadership', href: '/teams#leadership' },
   { name: 'Co-Researchers', href: '/teams?tab=coResearchers#team-tabs' },
   { name: 'Co-Supervisors', href: '/teams?tab=coSupervisors#team-tabs' },
