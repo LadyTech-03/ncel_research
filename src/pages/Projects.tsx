@@ -11,12 +11,12 @@ import SectionWrapper from '@/components/sections/SectionWrapper'
 
 // Images
 import labResearchImage from '@/assets/banner/banner_projects.jpg';
-import ncepImage from '@/assets/projects/ncep.png';
-import co2srapImage from '@/assets/projects/co2srap.png';
-import knepImage from '@/assets/projects/knep.png';
-import gh2srapImage from '@/assets/projects/gh2srap.png';
-import ccrerwImage from '@/assets/projects/ccrerw.png';
-import croogsImage from '@/assets/projects/croogs.png';
+import ncepImage from '@/assets/projects/ncep.webp';
+import co2srapImage from '@/assets/projects/co2srap.webp';
+import knepImage from '@/assets/projects/knep.webp';
+import gh2srapImage from '@/assets/projects/gh2srap.webp';
+import ccrerwImage from '@/assets/projects/ccrerw.webp';
+import croogsImage from '@/assets/projects/croogs.webp';
 
 
 // Mock project data
