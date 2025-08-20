@@ -4,10 +4,10 @@ import { PageHero } from '@/components/ui/page-hero';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Linkedin } from 'lucide-react';
 import aboutHeroImage from '@/assets/banner/banner_team.jpg';
 import SectionWrapper from '@/components/sections/SectionWrapper';
-import { FaLinkedin } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -205,7 +205,7 @@ const Teams = () => {
         name: "Mr. Isaac Marfo",
         image: IsaacImage,
         linkedin: "https://www.linkedin.com/in/isaac-marfo-ba41896b/",
-        // profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/456783375f83.html/"
+        profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/456783375f83.html/"
       },
     ]
   };
@@ -223,17 +223,7 @@ const Teams = () => {
           <div className="flex-1">
               <h3 className="text-base sm:text-xl font-semibold text-foreground">{member.name}</h3>
               <p className="text-md text-muted-foreground mb-3">{member.role}</p>
-            <div className="flex">
-              {member.linkedin && (
-                <a 
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full text-primary"
-                >
-                  <FaLinkedin className="w-5 h-5" />
-                </a>
-              )}
+            <div className="flex gap-2">
               {member.profile && (
                 <a 
                   href={member.profile}
@@ -241,7 +231,17 @@ const Teams = () => {
                   rel="noopener noreferrer"
                   className="rounded-full text-primary transition-colors"
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
+              {member.linkedin && (
+                <a 
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full text-primary"
+                >
+                  <Linkedin className="w-4 h-4" />
                 </a>
               )}
             </div>
@@ -275,7 +275,7 @@ const Teams = () => {
       <Navigation />
       
       <PageHero 
-        title="Team"
+        title="The Team"
         backgroundImage={aboutHeroImage}
         altText="NCEL Team"
       />
@@ -307,7 +307,7 @@ const Teams = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
                   >
-                    <FaLinkedin className="w-6 h-6" />
+                    <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
               </div>
@@ -332,7 +332,7 @@ const Teams = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg"
                   >
-                    <FaLinkedin className="w-6 h-6" />
+                    <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
               </div>

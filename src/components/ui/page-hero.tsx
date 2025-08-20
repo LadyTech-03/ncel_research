@@ -26,7 +26,7 @@ export const PageHero = ({ title, subtitle, backgroundImage, altText, children }
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {title && (
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold font-helvetica text-white mb-6">
             {title.toString().toUpperCase()}
           </h1>
         )}

@@ -5,24 +5,28 @@ import SectionWrapper from '@/components/sections/SectionWrapper';
 
 const pillars = [
   {
+    id: 'research',
     logo: '/icons/research.png',
     icon: Microscope,
     title: 'Research',
     description: 'NCEL drives innovative, science-based research across all areas of climate action, with expertise in decarbonization, carbon intensity assessment, net-zero strategy development, advanced emissions monitoring, carbon capture and storage (CCS), enhanced rock weathering (ERW), underground hydrogen storage (UHS), climate risk assessment, and adaptation planning. Our research is rooted in local realities but meets global standards, addressing both Ghanaian and international sustainability challenges.',
   },
   {
+    id: 'capacity-building',
     logo: '/icons/capacity-building.png',
     icon: Users,
     title: 'Capacity Building',
     description: 'We deliver targeted training programmes for companies and institutions across a wide range of climate action themes, including carbon accounting, CDR technologies, emissions modelling and forecasting, net-zero strategy development, climate risk assessment, and climate resilience planning. NCEL also offers intensive postgraduate and undergraduate training through its research projects, equipping students with high-quality research skills and practical experience needed for leadership in the green economy.',
   },
   {
+    id: 'entrepreneurship',
     logo: '/icons/entrepreneurship.png',
     icon: Lightbulb,
     title: 'Entrepreneurship',
     description: 'NCEL is committed to nurturing the next generation of green entrepreneurs. Our undergraduate and postgraduate projects are designed not only for academic excellence but also for real-world impact, with a strong focus on innovation and business incubation. We support the transformation of research outputs and thesis projects into climate-focused startups, laying the groundwork for new green enterprises to emerge from the lab.',
   },
   {
+    id: 'consulting',
     logo: '/icons/consulting.png',
     icon: BarChart3,
     title: 'Consulting',
@@ -69,7 +73,7 @@ export const PillarsSection = () => {
                       </div>
                     </div>
                     {/* Card */}
-                    <Card className="bg-primary-foreground/10 border-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/15 transition-all duration-300">
+                    <Card id={pillar.id} className="bg-primary-foreground/10 border-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/15 transition-all duration-300">
                       <CardContent className="p-6 md:p-8">
                         <div className="flex items-start justify-between gap-4">
                           <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground leading-tight">

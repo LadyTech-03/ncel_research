@@ -182,7 +182,7 @@ export const Publications = () => {
               <button
                 key={key}
                 onClick={() => setFilter(key)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                className={`px-4 py-2 rounded-full text-md font-medium transition-colors border ${
                   filter === key
                     ? 'bg-primary text-primary-foreground border-primary'
                     : 'bg-card text-foreground border-border hover:bg-card/80'

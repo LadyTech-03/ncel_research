@@ -4,22 +4,29 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Send, MapPin, Mail, Phone, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { FaXTwitter } from "react-icons/fa6";
 import SectionWrapper from '@/components/sections/SectionWrapper';
+import { Link } from 'react-router-dom';
 
 
 const quickLinks = [
-  'About Us',
-  'Projects', 
-  'Our Team',
-  'Publications',
-  'Blog'
+  { text: 'About Us', href: '/about' },
+  { text: 'Projects', href: '/projects' },
+  { text: 'Team', href: '/teams' },
+  { text: 'Publications', href: '/publications' },
 ];
 
-const pillars = [
-  'Research',
-  'Capacity Building',
-  'Entrepreneurship',
-  'Consulting'
-];
+const pillars = [{
+  text: 'Research',
+  href: '/?#research'
+}, {
+  text: 'Capacity Building',
+  href: '/?#capacity-building'
+}, {
+  text: 'Entrepreneurship',
+  href: '/?#entrepreneurship'
+}, {
+  text: 'Consulting',
+  href: '/?#consulting'
+}];
 
 const socials = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ncelknust', Icon: Linkedin },
@@ -73,14 +80,14 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li className='text-lg' key={link}>
-                  <a 
-                    href="#" 
+              {quickLinks.map(({ text, href }) => (
+                <li className='text-lg' key={text}>
+                  <Link
+                    to={href}
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 hover:underline"
                   >
-                    {link}
-                  </a>
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,14 +97,14 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-6">NCEL's Pillars</h3>
             <ul className="space-y-3">
-              {pillars.map((pillar) => (
-                <li className='text-lg' key={pillar}>
-                  <a 
-                    href="#" 
+              {pillars.map(({ text, href }) => (
+                <li className='text-lg' key={text}>
+                  <Link
+                    to={href}
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 hover:underline"
                   >
-                    {pillar}
-                  </a>
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>

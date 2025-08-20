@@ -49,7 +49,7 @@ export const WelcomeSection = () => {
               </p>
             </div>
             
-            <div className="mt-8">
+            <div className="flex justify-center lg:justify-start mt-8">
               <Button 
                 size="lg"
                 className="text-sm bg-accent hover:bg-accent/80 text-accent-foreground px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"

@@ -95,6 +95,18 @@ export default {
 					}
 				}
 			},
+			fontFamily: {
+				helvetica: ["Helvetica", "Arial", "sans-serif"],
+				georgia: ["Georgia", "serif"],
+				garamond: ["Garamond", "serif"],
+				courier: ["Courier New", "monospace"],
+				trebuchet: ["Trebuchet MS", "sans-serif"],
+				impact: ["Impact", "sans-serif"],
+				verdana: ["Verdana", "sans-serif"],
+				palatino: ["Palatino Linotype", "Book Antiqua", "Palatino", "serif"],
+				copperplate: ["Copperplate", "serif"],
+				lucida: ["Lucida Sans", "Lucida Grande", "sans-serif"],
+			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
