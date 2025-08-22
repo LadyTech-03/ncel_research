@@ -1,7 +1,7 @@
 import { Navigation } from '@/components/ui/navigation';
 import { Footer } from '@/components/sections/Footer';
 import { PageHero } from '@/components/ui/page-hero';
-import aboutHeroImage from '@/assets/banner/banner_projects.jpg';
+import aboutHeroImage from '@/assets/banner/banner_aboutus.jpg';
 // import aboutHeroImage from '@/assets/banner/about_us.jpg';
 import { Target, Eye, CheckCircle2 } from 'lucide-react';
 import SectionWrapper from '@/components/sections/SectionWrapper';
@@ -13,7 +13,7 @@ const About = () => {
       <Navigation />
       
       <PageHero 
-        title={"About Us"}
+        // title={"About Us"}
         // subtitle="Advancing Climate Action Through Decarbonisation & Climate Resilience"
         backgroundImage={aboutHeroImage}
         altText="About NCEL Research Lab"
@@ -55,7 +55,7 @@ const About = () => {
             
             {/* Additional Content */}
             <div className="space-y-8">
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-card">
+              <div className="bg-card border rounded-2xl p-8 shadow-card border-l-4 border-primary/40 ">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                     <CheckCircle2 className="h-5 w-5" />
