@@ -68,7 +68,7 @@ const projectsData = [
   {
     id: 3,
     title: "KNUST Net-Zero Emissions Project (KNEP)",
-    description: "The KNUST Net-Zero Emissions Project (KNEP) aims to establish the Kwame Nkrumah University of Science and Technology (KNUST) as a living laboratory for climate solutions. This project involves conducting a comprehensive assessment of the university's carbon intensity, including emissions from all colleges, units, and facilities, in line with global GHG protocols. It also seeks to evaluate the carbon sink potential of KNUST’s natural forests and green environments. By leveraging the data collected, KNEP will develop a robust decarbonization plan to guide the university toward achieving net-zero emissions. The initiative emphasizes building local capacity for reliable Measurement, Reporting, and Verification (MRV) systems, which can be scaled to other institutions and industries in Ghana. This transformative project positions KNUST to lead climate action in the African subregion while enhancing sustainability reporting and contributing to the global “Race to Zero” movement. The project has three research assistants and supported by the Climate Compatible Growth.",
+    description: "The KNUST Net-Zero Emissions Project (KNEP) aims to establish the Kwame Nkrumah University of Science and Technology (KNUST) as a living laboratory for climate solutions. This project involves conducting a comprehensive assessment of the university's carbon intensity, including emissions from all colleges, units, and facilities, in line with global GHG protocols. It also seeks to evaluate the carbon sink potential of KNUST’s natural forests and green environments. By leveraging the data collected, KNEP will develop a robust decarbonisation plan to guide the university toward achieving net-zero emissions. The initiative emphasizes building local capacity for reliable Measurement, Reporting, and Verification (MRV) systems, which can be scaled to other institutions and industries in Ghana. This transformative project positions KNUST to lead climate action in the African subregion while enhancing sustainability reporting and contributing to the global “Race to Zero” movement. The project has three research assistants and supported by the Climate Compatible Growth.",
     image: knepImage,
     tags: ["Hydrogen Storage", "Rock Weathering", "Geological Assessment"],
     activities: [
@@ -90,7 +90,7 @@ const projectsData = [
   {
     id: 4,
     title: (<>Geological Hydrogen Storage Resource Assessment Project (GH<sub>2</sub>SRAP)</>),
-    description: (<>The GH<sub>2</sub>SRAP is a groundbreaking initiative aimed at assessing the potential for geological hydrogen storage (GHS) in Ghana. This project focuses on analyzing the suitability of Ghana’s four major sedimentary basins—the Voltaian, Saltpond, Accra-Keta, and Tano-Cape Three Points and other geological facilities —for long-term hydrogen storage. GH<sub>2</sub>SRAP also emphasizes capacity building, training undergraduate students, and generating reliable data for future hydrogen storage initiatives. This project represents NCEL's commitment to advancing innovative, sustainable energy solutions that align with global decarbonization efforts and position Ghana as a leader in the emerging hydrogen economy. Currently, the project has one research assistant and supported by the Climate Compatible Growth (CCG).</>),
+    description: (<>The GH<sub>2</sub>SRAP is a groundbreaking initiative aimed at assessing the potential for geological hydrogen storage (GHS) in Ghana. This project focuses on analyzing the suitability of Ghana’s four major sedimentary basins—the Voltaian, Saltpond, Accra-Keta, and Tano-Cape Three Points and other geological facilities —for long-term hydrogen storage. GH<sub>2</sub>SRAP also emphasizes capacity building, training undergraduate students, and generating reliable data for future hydrogen storage initiatives. This project represents NCEL's commitment to advancing innovative, sustainable energy solutions that align with global decarbonisation efforts and position Ghana as a leader in the emerging hydrogen economy. Currently, the project has one research assistant and supported by the Climate Compatible Growth (CCG).</>),
     image: gh2srapImage,
     tags: ["Agriculture", "Clean Energy", "Geological Assessment"],
     activities: [
@@ -235,11 +235,11 @@ const Projects = () => {
                     <div className="flex-1 p-4 md:p-6">
                       <CardHeader className="p-0 md:p-0">
                         <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag) => (
+                          {/* {project.tags.map((tag) => (
                             <Badge key={tag} variant="secondary" className="text-sm text-foreground/90">
                               {tag}
                             </Badge>
-                          ))}
+                          ))} */}
                         </div>
                         <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-4">
                           {project.title}

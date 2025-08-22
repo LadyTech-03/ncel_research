@@ -38,6 +38,7 @@ import AndyImage from '@/assets/team/andy.jpeg';
 import EdmondImage from '@/assets/team/edmond.jpeg';
 import ChristabelImage from '@/assets/team/christabel.jpeg';
 import IsaacImage from '@/assets/team/isaac.jpg';
+import KwadwoImage from '@/assets/team/kwadwo.jpg'
 // import AdwoaImage from '@/assets/team/adwoa.jpg';
 
 import fallbackImage from '@/assets/team/user.jpg';
@@ -221,6 +222,16 @@ const Teams = () => {
         image: IsaacImage,
         linkedin: "https://www.linkedin.com/in/isaac-marfo-ba41896b/",
         profile: "https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/456783375f83.html/"
+      },
+      {
+        name: "Joshua Kwadwo Bediako",
+        image: KwadwoImage,
+        linkedin: "https://www.linkedin.com/in/joshua-kwadwo-bediako-3201a8264",
+      },
+      {
+        name: "Dickson Agyei",
+        image: DicksonImage,
+        linkedin: "https://www.linkedin.com/in/dickson-agyei-jnr",
       },
     ]
   };

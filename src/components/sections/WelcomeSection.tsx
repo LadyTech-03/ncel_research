@@ -37,7 +37,7 @@ export const WelcomeSection = () => {
             
             <div className="space-y-6 text-xl text-foreground leading-relaxed">
               <p>
-                At NCEL, a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), we deliver data-driven, science-based solutions for effective decarbonization and climate resilience.
+                At NCEL, a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), we deliver data-driven, science-based solutions for effective decarbonisation and climate resilience.
               </p>
               
               <p>

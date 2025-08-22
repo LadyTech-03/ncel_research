@@ -19,9 +19,9 @@ const navigationItems = [
 ];
 
 const mediaDropdownItems = [
+  { name: 'Publications', href: '/publications' },
   { name: 'Research', href: '#research' },
   { name: 'News', href: '#news' },
-  { name: 'Publications', href: '/publications' },
 ];
 
 const teamDropdownItems = [

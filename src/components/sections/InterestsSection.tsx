@@ -7,7 +7,7 @@ import climateIcon from '/icons/climate-resilience.png';
 const interests = [
 	{
 		icon: decarbIcon,
-		title: 'Decarbonization',
+		title: 'Decarbonisation',
 		description:
 			'We conduct comprehensive carbon intensity assessments across sectors, develop and implement data-driven net-zero strategies, and provide training for institutions to effectively transition to low-carbon operations. Our expertise also includes the design of robust monitoring tools for carbon management, as well as cutting-edge research into advanced mitigation technologies such as carbon capture and storage (CCS), enhanced rock weathering (ERW), and underground hydrogen storage (UHS).',
 	},

@@ -1,7 +1,8 @@
 import { Navigation } from '@/components/ui/navigation';
 import { Footer } from '@/components/sections/Footer';
 import { PageHero } from '@/components/ui/page-hero';
-import aboutHeroImage from '@/assets/banner/about_us.jpg';
+import aboutHeroImage from '@/assets/banner/banner_projects.jpg';
+// import aboutHeroImage from '@/assets/banner/about_us.jpg';
 import { Target, Eye, CheckCircle2 } from 'lucide-react';
 import SectionWrapper from '@/components/sections/SectionWrapper';
 
@@ -12,10 +13,11 @@ const About = () => {
       <Navigation />
       
       <PageHero 
-        // title={<>About US</>}
-        // subtitle="Advancing Climate Action Through Decarbonization & Climate Resilience"
+        title={"About Us"}
+        // subtitle="Advancing Climate Action Through Decarbonisation & Climate Resilience"
         backgroundImage={aboutHeroImage}
         altText="About NCEL Research Lab"
+        // titleClass="text-3xl md:text-4xl"
       />
 
       {/* Main Content */}
@@ -24,12 +26,12 @@ const About = () => {
           <div className="relative overflow-hidden rounded-3xl border border-border bg-card/50 supports-[backdrop-filter]:bg-card/30 backdrop-blur p-6 md:p-10">
             <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="pointer-events-none absolute -bottom-24 -right-24 w-[28rem] h-[28rem] bg-accent/10 rounded-full blur-3xl" />
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div className="grid lg:grid-cols-1 gap-16 items-start">
             {/* Main Text */}
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
                 Advancing Climate Action Through 
-                <span className="bg-gradient-to-r from-primary-dark to-primary bg-clip-text text-transparent"> Decarbonization & Climate Resilience</span>
+                <span className="bg-gradient-to-r from-primary-dark to-primary bg-clip-text text-transparent"> Decarbonisation & Climate Resilience</span>
               </h2>
               
               <div className="space-y-6 text-xl text-foreground leading-relaxed border-l-4 border-primary/40 pl-6">
@@ -38,11 +40,11 @@ const About = () => {
                 </p>
                 
                 <p>
-                  The Net-Zero Carbon Emission Lab (NCEL) at Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, is a specialized research hub committed to advancing climate action through rigorous, science-based and data-driven solutions. Our work is anchored on two main pillars: Decarbonization and Climate Resilience.
+                  The Net-Zero Carbon Emission Lab (NCEL) at Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, is a specialized research hub committed to advancing climate action through rigorous, science-based and data-driven solutions. Our work is anchored on two main pillars: Decarbonisation and Climate Resilience.
                 </p>
                 
                 <p>
-                  In decarbonization, we provide comprehensive carbon intensity assessments, develop and support the implementation of net-zero strategies. Our research further covers advanced mitigation solutions, including carbon capture and storage (CCS), enhanced rock weathering (ERW), and underground hydrogen storage (UHS).
+                  In decarbonisation, we provide comprehensive carbon intensity assessments, develop and support the implementation of net-zero strategies. Our research further covers advanced mitigation solutions, including carbon capture and storage (CCS), enhanced rock weathering (ERW), and underground hydrogen storage (UHS).
                 </p>
                 
                 <p>
@@ -58,7 +60,7 @@ const About = () => {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                     <CheckCircle2 className="h-5 w-5" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Our Commitment</h3>
+                  <h3 className="text-2xl font-bold text-primary">Our Commitment</h3>
                 </div>
                 <div className="space-y-4 text-xl text-foreground">
                   <p>
@@ -91,7 +93,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-primary">Vision</h3>
               </div>
               <p className="text-xl text-foreground leading-relaxed">
-                NCEL aims to be a globally recognized centre of excellence, driving data-driven decarbonization through cutting-edge research, impactful training, entrepreneurship and strategic advisory support toward a sustainable low carbon future.
+                NCEL aims to be a globally recognized centre of excellence, driving data-driven decarbonisation through cutting-edge research, impactful training, entrepreneurship and strategic advisory support toward a sustainable low carbon future.
               </p>
             </div>
 

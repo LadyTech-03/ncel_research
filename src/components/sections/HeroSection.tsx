@@ -50,7 +50,7 @@ export const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Your Trusted Partner for{' '}
             <span className="text-white">
-              Decarbonization
+              Decarbonisation
             </span>{' '}
             and{' '}
             <span className="text-white">

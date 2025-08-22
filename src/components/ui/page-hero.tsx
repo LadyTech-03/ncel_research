@@ -6,9 +6,10 @@ interface PageHeroProps {
   backgroundImage?: string;
   altText?: string;
   children?: ReactNode;
+  titleClass?: string;
 }
 
-export const PageHero = ({ title, subtitle, backgroundImage, altText, children }: PageHeroProps) => {
+export const PageHero = ({ title, subtitle, backgroundImage, altText, children, titleClass }: PageHeroProps) => {
   return (
     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-16">
       <div className="absolute inset-0">
@@ -26,7 +27,7 @@ export const PageHero = ({ title, subtitle, backgroundImage, altText, children }
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {title && (
-          <h1 className="text-5xl md:text-7xl font-extrabold font-helvetica text-white mb-6">
+          <h1 className={`text-5xl md:text-7xl font-extrabold font-helvetica text-white mb-6 ${titleClass}`}>
             {title.toString().toUpperCase()}
           </h1>
         )}

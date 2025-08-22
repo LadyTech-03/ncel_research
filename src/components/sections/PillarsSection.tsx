@@ -9,7 +9,7 @@ const pillars = [
     logo: '/icons/research.png',
     icon: Microscope,
     title: 'Research',
-    description: 'NCEL drives innovative, science-based research across all areas of climate action, with expertise in decarbonization, carbon intensity assessment, net-zero strategy development, advanced emissions monitoring, carbon capture and storage (CCS), enhanced rock weathering (ERW), underground hydrogen storage (UHS), climate risk assessment, and adaptation planning. Our research is rooted in local realities but meets global standards, addressing both Ghanaian and international sustainability challenges.',
+    description: 'NCEL drives innovative, science-based research across all areas of climate action, with expertise in decarbonisation, carbon intensity assessment, net-zero strategy development, advanced emissions monitoring, carbon capture and storage (CCS), enhanced rock weathering (ERW), underground hydrogen storage (UHS), climate risk assessment, and adaptation planning. Our research is rooted in local realities but meets global standards, addressing both Ghanaian and international sustainability challenges.',
   },
   {
     id: 'capacity-building',
@@ -30,7 +30,7 @@ const pillars = [
     logo: '/icons/consulting.png',
     icon: BarChart3,
     title: 'Consulting',
-    description: 'NCEL provides expert consulting services to industry, government, and development partners, offering science-based solutions in decarbonization, climate risk assessment, emissions management, climate adaptation, and sustainability strategy. Our consulting leverages rigorous research and local expertise to help clients achieve measurable progress toward their climate and sustainability goals.',
+    description: 'NCEL provides expert consulting services to industry, government, and development partners, offering science-based solutions in decarbonisation, climate risk assessment, emissions management, climate adaptation, and sustainability strategy. Our consulting leverages rigorous research and local expertise to help clients achieve measurable progress toward their climate and sustainability goals.',
   },
 ];
 
