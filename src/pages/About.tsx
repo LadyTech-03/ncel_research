@@ -34,7 +34,7 @@ const About = () => {
                 <span className="bg-gradient-to-r from-primary-dark to-primary bg-clip-text text-transparent"> Decarbonisation & Climate Resilience</span>
               </h2>
               
-              <div className="space-y-6 text-xl text-foreground leading-relaxed border-l-4 border-primary/40 pl-6">
+              <div className="space-y-6 text-xl lg:text-2xl text-foreground leading-relaxed border-l-4 border-primary/40 pl-6">
                 <p>
                   The Net-Zero Carbon Emission Lab (NCEL) at KNUST is committed to driving climate action through rigorous, science-based and data-driven solutions.
                 </p>
@@ -62,7 +62,7 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-primary">Our Commitment</h3>
                 </div>
-                <div className="space-y-4 text-xl text-foreground">
+                <div className="space-y-4 text-xl lg:text-2xl text-foreground">
                   <p>
                     NCEL collaborates with leading international and industry partners, delivering high-impact projects, capacity-building programs, entrepreneurship and thought leadership at major conferences and events.
                   </p>
@@ -83,7 +83,7 @@ const About = () => {
       {/* Mission & Vision */}
       <section className="py-16 bg-muted">
         <SectionWrapper>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Vision */}
             <div className="bg-card border border-border rounded-2xl p-8 shadow-card relative">
               <div className="flex items-center gap-4 mb-6">
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-primary">Vision</h3>
               </div>
-              <p className="text-xl text-foreground leading-relaxed">
+              <p className="text-xl lg:text-2xl text-foreground leading-relaxed">
                 NCEL aims to be a globally recognized centre of excellence, driving data-driven decarbonisation through cutting-edge research, impactful training, entrepreneurship and strategic advisory support toward a sustainable low carbon future.
               </p>
             </div>
@@ -105,7 +105,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-primary">Mission</h3>
               </div>
-              <p className="text-xl text-foreground leading-relaxed">
+              <p className="text-xl lg:text-2xl text-foreground leading-relaxed">
                 To advance Ghana's transition to a low carbon future by generating high-quality emissions data, building local capacity, and delivering research-driven solutions that support industry, policy, and society in making informed, sustainable decisions.
               </p>
             </div>
