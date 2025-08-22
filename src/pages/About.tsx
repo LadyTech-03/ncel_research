@@ -29,10 +29,10 @@ const About = () => {
             <div className="grid lg:grid-cols-1 gap-16 items-start">
             {/* Main Text */}
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              {/* <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
                 Advancing Climate Action Through 
                 <span className="bg-gradient-to-r from-primary-dark to-primary bg-clip-text text-transparent"> Decarbonisation & Climate Resilience</span>
-              </h2>
+              </h2> */}
               
               <div className="space-y-6 text-xl lg:text-2xl text-foreground leading-relaxed border-l-4 border-primary/40 pl-6">
                 <p>
