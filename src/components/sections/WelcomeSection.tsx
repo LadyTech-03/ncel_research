@@ -31,13 +31,13 @@ export const WelcomeSection = () => {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Welcome to the{' '}
-              <span className="text-primary">Net-Zero Carbon Emission Lab</span>
+              Welcome to {' '}
+              <span className="text-primary">NCEL</span>
             </h2>
             
-            <div className="space-y-6 text-xl text-foreground leading-relaxed">
+            <div className="space-y-6 text-lg md:text-2xl text-foreground leading-relaxed">
               <p>
-                At NCEL, a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), we deliver data-driven, science-based solutions for effective decarbonisation and climate resilience.
+                At the Net-Zero Carbon Emission Lab, a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), we deliver data-driven, science-based solutions for effective decarbonisation and climate resilience.
               </p>
               
               <p>

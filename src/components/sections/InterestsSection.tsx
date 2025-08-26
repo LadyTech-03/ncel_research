@@ -1,6 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
-import labImage from '@/assets/banner/banner1.jpg';
+import { useEffect, useRef, useState } from 'react';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import SectionWrapper from '@/components/sections/SectionWrapper';
+
+// Import images and icons
+import decarbImage from '@/assets/banner/decarbonization.webp';
+import climateImage from '@/assets/banner/climate resilience.webp';
+
 import decarbIcon from '/icons/decarbonization.png';
 import climateIcon from '/icons/climate-resilience.png';
 
@@ -20,6 +26,45 @@ const interests = [
 ];
 
 export const InterestsSection = () => {
+	const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+	const [selectedIndex, setSelectedIndex] = useState<number>(0);
+	const [slideCount, setSlideCount] = useState<number>(0);
+	const directionRef = useRef<boolean>(true);
+
+	useEffect(() => {
+		if (!carouselApi) return;
+
+		setSlideCount(carouselApi.slideNodes().length);
+		setSelectedIndex(carouselApi.selectedScrollSnap());
+
+		const onSelect = () => setSelectedIndex(carouselApi.selectedScrollSnap());
+		carouselApi.on('select', onSelect);
+
+		const interval = setInterval(() => {
+			if (!carouselApi) return;
+			if (directionRef.current) {
+				if (!carouselApi.canScrollNext()) {
+					directionRef.current = false;
+					carouselApi.scrollPrev();
+				} else {
+					carouselApi.scrollNext();
+				}
+			} else {
+				if (!carouselApi.canScrollPrev()) {
+					directionRef.current = true;
+					carouselApi.scrollNext();
+				} else {
+					carouselApi.scrollPrev();
+				}
+			}
+		}, 4000);
+
+		return () => {
+			carouselApi.off('select', onSelect);
+			clearInterval(interval);
+		};
+	}, [carouselApi]);
+
 	return (
 		<section className="relative py-16 bg-gradient-to-br from-background to-muted/30 overflow-hidden">
 			{/* Background decorations */}
@@ -34,18 +79,44 @@ export const InterestsSection = () => {
 					</h2>
 				</div>
 
-				{/* Content grid with image + cards */}
+				{/* Content grid with carousel + cards */}
 				<div className="grid lg:grid-cols-2 gap-12 items-start">
-					{/* Image */}
+					{/* Carousel */}
 					<div className="order-2 lg:order-1">
 						<div className="relative">
-							<div className="rounded-3xl overflow-hidden shadow-strong ring-1 ring-border/60">
-								<img
-									src={labImage}
-									alt="NCEL Laboratory Research"
-									className="w-full h-[460px] md:h-[520px] object-cover"
-								/>
+							<div className="rounded-lg overflow-hidden shadow-strong">
+								<Carousel setApi={setCarouselApi} className="w-full">
+									<CarouselContent>
+										<CarouselItem>
+											<img
+												src={decarbImage}
+												alt="Decarbonisation"
+												className="w-full h-auto object-fit"
+											/>
+										</CarouselItem>
+										<CarouselItem>
+											<img
+												src={climateImage}
+												alt="Climate Resilience"
+												className="w-full h-auto object-fit"
+											/>
+										</CarouselItem>
+									</CarouselContent>
+								</Carousel>
 							</div>
+							{/* Dot navigation */}
+							{slideCount > 1 && (
+								<div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-2 bg-background/60 backdrop-blur rounded-full px-3 py-1">
+									{Array.from({ length: slideCount }).map((_, idx) => (
+										<button
+											key={idx}
+											onClick={() => carouselApi?.scrollTo(idx)}
+											className={`h-2.5 rounded-full transition-colors ${selectedIndex === idx ? 'bg-primary w-6' : 'bg-muted-foreground/40 w-2.5'}`}
+											aria-label={`Go to slide ${idx + 1}`}
+										/>
+									))}
+								</div>
+							)}
 							<div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
 							<div className="absolute -bottom-8 -right-8 w-40 h-40 bg-accent/20 rounded-full blur-2xl" />
 						</div>
@@ -62,7 +133,7 @@ export const InterestsSection = () => {
 									<CardContent className="p-6">
 										<div className="flex items-start gap-4">
 											<div className="relative flex-shrink-0">
-												<div className="relative bg-primary-dark z-10 w-16 h-16 rounded-full flex items-center justify-center p-2 border-2 border-primary">
+												<div className="relative bg-primary-dark z-10 w-10 h-10 md:w-16 md:h-16 rounded-full flex items-center justify-center p-2 border-2 border-primary">
 													<img
 														src={interest.icon}
 														alt={`${interest.title} icon`}
@@ -74,7 +145,7 @@ export const InterestsSection = () => {
 												<h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
 													{interest.title}
 												</h3>
-												<p className="text-lg md:text-xl text-foreground leading-relaxed">
+												<p className="text-lg md:text-2xl text-foreground leading-relaxed">
 													{interest.description}
 												</p>
 											</div>
