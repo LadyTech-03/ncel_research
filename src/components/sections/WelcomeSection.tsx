@@ -37,15 +37,15 @@ export const WelcomeSection = () => {
             
             <div className="space-y-6 text-lg md:text-2xl text-foreground leading-relaxed">
               <p>
-                At the Net-Zero Carbon Emission Lab, a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), we deliver data-driven, science-based solutions for effective decarbonisation and climate resilience.
+                The Net-Zero Carbon Emission Lab (NCEL) is a specialized research hub at the Kwame Nkrumah University of Science and Technology (KNUST), Kumasi. At NCEL, we deliver data-driven, science-based solutions for effective decarbonization and climate resilience.
               </p>
               
               <p>
-                We work closely with leading international and industrial partners on impactful projects both locally and globally, deliver high-quality training programmes, and share our expertise at key events and conferences.
+                As a specialized research hub, we work closely with local and international partners on impactful projects, deliver high-quality training, and share our expertise to drive evidence-based climate action.
               </p>
               
               <p>
-                We are always open to collaborations and invite you to join us as we drive evidence-based climate action for a sustainable future in Ghana, Africa, and beyond.
+                We invite you to collaborate with us as we work toward a sustainable future for Ghana, Africa, and beyond. We are your trusted partner for decarbonization and climate resilience solutions!
               </p>
             </div>
             
